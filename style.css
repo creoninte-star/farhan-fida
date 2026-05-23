@@ -107,7 +107,7 @@ body {
 .env-card:hover { transform: scale(1.02); }
 
 .env-inside {
-  position: absolute; inset: 0; background: #2A2422; z-index: 1; box-shadow: inset 0 10px 20px rgba(0,0,0,0.5);
+  position: absolute; inset: 0; background: radial-gradient(circle at center, #FDFBF7, #E9DFCE); z-index: 1; box-shadow: inset 0 5px 15px rgba(188, 163, 116, 0.2);
 }
 .env-foil-liner {
   position: absolute; inset: 4px;
