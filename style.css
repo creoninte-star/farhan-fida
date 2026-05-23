@@ -238,7 +238,7 @@ body {
 .arch-intro { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--clr-text-secondary); margin-bottom: 2rem; padding: 0 1rem; }
 
 .arch-names-premium { display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 1.5rem 0 2.5rem; }
-.arch-name-line { font-family: var(--font-heading); font-size: 3.2rem; font-weight: 900; font-style: italic; background: linear-gradient(to bottom, #fff8b0 0%, #dfb239 25%, #69460a 45%, #e9c148 55%, #fff8b0 80%, #8b6113 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(3px 4px 5px rgba(0,0,0,0.6)); line-height: 1.1; letter-spacing: 1px; }
+.arch-name-line { font-family: var(--font-heading); font-size: 3.2rem; font-weight: 900; font-style: italic; background: linear-gradient(to bottom, #fdf5a9 0%, #dfb239 30%, #c59b36 50%, #fdf5a9 75%, #a87c22 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(3px 4px 5px rgba(0,0,0,0.6)); line-height: 1.1; letter-spacing: 1px; }
 .arch-divider { display: flex; align-items: center; justify-content: center; width: 100%; margin: 1rem 0; gap: 15px; }
 .arch-divider-line { flex: 1; max-width: 60px; height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent); }
 .arch-amp { font-family: var(--font-heading); font-size: 1.8rem; color: var(--clr-gold); font-style: italic; opacity: 0.8; }
