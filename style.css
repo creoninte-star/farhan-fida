@@ -38,12 +38,13 @@ body {
   background: var(--clr-bg-primary); border: 2px solid var(--clr-gold);
   width: 50px; height: 50px; border-radius: 50%;
   cursor: pointer; display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5); transition: box-shadow 0.3s ease, transform 0.2s ease;
-  animation: spinDisc 4s linear infinite;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5); transition: box-shadow 0.3s ease, transform 0.2s ease, opacity 0.6s ease;
+  opacity: 0; pointer-events: none;
 }
+.music-disc.visible { opacity: 1; pointer-events: auto; }
 .music-disc:hover { box-shadow: var(--shadow-glow); transform: scale(1.05); }
-.music-disc.paused { animation-play-state: paused; }
-.music-icon { width: 24px; height: 24px; fill: var(--clr-gold); }
+.music-icon { width: 24px; height: 24px; fill: var(--clr-gold); animation: spinDisc 4s linear infinite; }
+.music-disc.paused .music-icon { animation-play-state: paused; }
 @keyframes spinDisc { 100% { transform: rotate(360deg); } }
 
 /* Particles */

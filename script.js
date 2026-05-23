@@ -56,6 +56,7 @@ waxSeal.addEventListener('click', () => {
     setTimeout(() => {
         envScreen.classList.add('slide-away');
         mainInv.style.display = 'block';
+        muteBtn.classList.add('visible');
         
         // Trigger the cinematic 'emerge' animation
         setTimeout(() => {
