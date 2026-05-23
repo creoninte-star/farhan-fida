@@ -264,7 +264,7 @@ function initScratchCard() {
 
 // Countdown Timer
 // Use ISO 8601 format for Safari cross-browser compatibility
-const targetDate = new Date('2026-05-30T16:00:00').getTime();
+const targetDate = new Date('2026-08-05T11:00:00').getTime();
 const daysEl = document.getElementById('cd-days');
 const hoursEl = document.getElementById('cd-hours');
 const minsEl = document.getElementById('cd-mins');
@@ -290,60 +290,23 @@ if (daysEl) {
 // RSVP Flow
 const btnYes = document.getElementById('rsvp-yes-btn');
 const btnNo = document.getElementById('rsvp-no-btn');
-const btnBack = document.getElementById('rsvp-back-btn');
 const step1 = document.getElementById('rsvp-step1');
-const formStep = document.getElementById('rsvp-form');
 const successStep = document.getElementById('rsvp-success');
 const declineStep = document.getElementById('rsvp-decline');
 
 btnYes.addEventListener('click', () => {
     step1.classList.add('hidden-step');
-    setTimeout(() => formStep.classList.remove('hidden-step'), 100);
+    setTimeout(() => {
+        successStep.classList.remove('hidden-step');
+        fireConfetti();
+    }, 100);
 });
 
 btnNo.addEventListener('click', () => {
     step1.classList.add('hidden-step');
-    setTimeout(() => declineStep.classList.remove('hidden-step'), 100);
-});
-
-btnBack.addEventListener('click', () => {
-    formStep.classList.add('hidden-step');
-    setTimeout(() => step1.classList.remove('hidden-step'), 100);
-});
-
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzYSFv6tu-ShSdrxqRKuWsjUTH-VHlid8geswxfuZLkctTDtrvTIOKjdRNbs0rxIn7N/exec';
-
-formStep.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(formStep);
-    
-    // Change button text to show loading
-    const submitBtn = formStep.querySelector('.rsvp-submit-btn');
-    const originalText = submitBtn.innerText;
-    submitBtn.innerText = 'Submitting...';
-    submitBtn.disabled = true;
-
-    // Send data to Google Sheets
-    fetch(GOOGLE_SCRIPT_URL, {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => {
-        // Hide form and show success
-        formStep.classList.add('hidden-step');
-        setTimeout(() => {
-            successStep.classList.remove('hidden-step');
-            fireConfetti();
-        }, 100);
-    })
-    .catch(error => {
-        console.error('Error!', error.message);
-        alert('Something went wrong. Please try again.');
-        submitBtn.innerText = originalText;
-        submitBtn.disabled = false;
-    });
+    setTimeout(() => {
+        declineStep.classList.remove('hidden-step');
+    }, 100);
 });
 
 // Slideshow Logic
