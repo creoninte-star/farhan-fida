@@ -371,14 +371,14 @@ body {
 .closing-ornament { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 2rem; }
 .clo-line { width: 40px; height: 1px; background: rgba(201,168,76,0.4); }
 .clo-diamond { width: 8px; height: 8px; border: 1px solid var(--clr-gold); transform: rotate(45deg); }
-.closing-quote { font-family: var(--font-heading); font-size: 1.2rem; font-style: italic; color: rgba(255,255,255,0.9); margin-bottom: 0.5rem; }
+.closing-quote { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 500; font-style: italic; color: var(--clr-text); margin-bottom: 0.5rem; max-width: 800px; margin-inline: auto; line-height: 1.4; }
 .closing-ref { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 3px; color: var(--clr-gold); }
-.closing-mid-line { width: 40px; height: 1px; background: rgba(255,255,255,0.2); margin: 2rem auto; }
+.closing-mid-line { width: 40px; height: 1px; background: rgba(201,168,76,0.4); margin: 2rem auto; }
 .closing-signoff { font-family: var(--font-heading); font-size: 2rem; color: var(--clr-gold); font-style: italic; margin-bottom: 0.5rem; }
 .closing-contact-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--clr-text-secondary); margin-bottom: 1rem; }
 .contact-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 3rem; }
 .contact-pill { padding: 0.5rem 1rem; border: 1px solid rgba(201,168,76,0.3); border-radius: 20px; color: var(--clr-gold); text-decoration: none; font-size: 0.8rem; }
-.closing-footer { font-size: 0.7rem; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 2px; }
+.closing-footer { margin-top: 3rem; padding-bottom: 2rem; text-align: center; font-size: 0.65rem; letter-spacing: 2px; color: var(--clr-text-secondary); text-transform: uppercase; }
 
 /* Premium Staggered Animations */
 .reveal-section { perspective: 1000px; }
