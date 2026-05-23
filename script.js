@@ -43,6 +43,7 @@ waxSeal.addEventListener('click', () => {
 
     // Start music
     bgMusic.volume = 0.5;
+    bgMusic.currentTime = 12;
     bgMusic.play().then(() => {
         isMusicPlaying = true;
         muteBtn.classList.remove('paused');
