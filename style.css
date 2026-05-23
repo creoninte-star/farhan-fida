@@ -202,7 +202,7 @@ body {
 .arch-card {
   position: relative; background: var(--clr-surface); width: 100%; max-width: 400px;
   border-top-left-radius: 140px; border-top-right-radius: 140px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;
-  padding: 3rem 1.5rem; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  padding: 3rem 1.5rem; text-align: center; box-shadow: 0 30px 60px rgba(50, 44, 43, 0.1), inset 0 0 20px rgba(255,255,255,0.6);
 }
 .arch-frame { position: absolute; pointer-events: none; border-top-left-radius: 130px; border-top-right-radius: 130px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; }
 .arch-frame-outer { inset: 8px; border: 1px solid rgba(201,168,76,0.4); }
@@ -215,9 +215,11 @@ body {
 
 .arch-intro { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--clr-text-secondary); margin-bottom: 2rem; padding: 0 1rem; }
 
-.arch-names { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 2rem; }
-.arch-name { font-family: var(--font-heading); font-size: 2.5rem; font-style: italic; color: var(--clr-gold); }
-.arch-heart { color: var(--clr-gold); opacity: 0.6; font-size: 1.5rem; }
+.arch-names-premium { display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 1.5rem 0 2.5rem; }
+.arch-name-line { font-family: var(--font-heading); font-size: 2.8rem; font-weight: 400; font-style: italic; color: var(--clr-text); line-height: 1.1; letter-spacing: 1px; }
+.arch-divider { display: flex; align-items: center; justify-content: center; width: 100%; margin: 1rem 0; gap: 15px; }
+.arch-divider-line { flex: 1; max-width: 60px; height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent); }
+.arch-amp { font-family: var(--font-heading); font-size: 1.8rem; color: var(--clr-gold); font-style: italic; opacity: 0.8; }
 
 .arch-together { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 3px; color: var(--clr-text-secondary); margin-bottom: 1.5rem; }
 
@@ -381,7 +383,7 @@ body {
 /* Premium Staggered Animations */
 .reveal-section { perspective: 1000px; }
 
-.reveal-section .arch-intro, .reveal-section .arch-names, .reveal-section .arch-parents, .reveal-section .arch-photo, .reveal-section .arch-request,
+.reveal-section .arch-intro, .reveal-section .arch-names-premium, .reveal-section .arch-parents, .reveal-section .arch-photo, .reveal-section .arch-request,
 .reveal-section .events-title, .reveal-section .events-title-line, .reveal-section .scratch-wrap, .reveal-section .event-item,
 .reveal-section .lucky-banner, .reveal-section .rsvp-card,
 .reveal-section .closing-ornament, .reveal-section .closing-quote, .reveal-section .closing-signoff, .reveal-section .contact-pills {
@@ -390,7 +392,7 @@ body {
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.reveal-section.is-visible .arch-intro, .reveal-section.is-visible .arch-names, .reveal-section.is-visible .arch-parents, .reveal-section.is-visible .arch-photo, .reveal-section.is-visible .arch-request,
+.reveal-section.is-visible .arch-intro, .reveal-section.is-visible .arch-names-premium, .reveal-section.is-visible .arch-parents, .reveal-section.is-visible .arch-photo, .reveal-section.is-visible .arch-request,
 .reveal-section.is-visible .events-title, .reveal-section.is-visible .events-title-line, .reveal-section.is-visible .scratch-wrap, .reveal-section.is-visible .event-item,
 .reveal-section.is-visible .lucky-banner, .reveal-section.is-visible .rsvp-card,
 .reveal-section.is-visible .closing-ornament, .reveal-section.is-visible .closing-quote, .reveal-section.is-visible .closing-signoff, .reveal-section.is-visible .contact-pills {
@@ -400,7 +402,7 @@ body {
 
 /* Staggered Delays for Arch Card */
 .reveal-section.is-visible .arch-intro { transition-delay: 0.1s; }
-.reveal-section.is-visible .arch-names { transition-delay: 0.3s; }
+.reveal-section.is-visible .arch-names-premium { transition-delay: 0.3s; }
 .reveal-section.is-visible .arch-parents { transition-delay: 0.5s; }
 .reveal-section.is-visible .arch-photo { transition-delay: 0.7s; }
 .reveal-section.is-visible .arch-request { transition-delay: 0.9s; }
@@ -427,8 +429,8 @@ body {
   transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .arch-card:hover, .events-card:hover, .rsvp-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.6), inset 0 0 20px rgba(201, 168, 76, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 35px 70px rgba(50, 44, 43, 0.15), inset 0 0 25px rgba(255, 255, 255, 0.8);
 }
 
 /* Confetti Particles (Performance Optimized) */
