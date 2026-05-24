@@ -94,6 +94,11 @@ body {
   color: var(--clr-text-secondary); font-size: clamp(0.8rem, 2.5vw, 1rem);
   letter-spacing: 2px;
 }
+.env-welcome-names {
+  font-family: var(--font-heading); color: var(--clr-text);
+  font-size: clamp(1.8rem, 5vw, 2.6rem); font-style: italic; font-weight: 600;
+  margin-top: 0.8rem; letter-spacing: 1px; line-height: 1.2;
+}
 
 .env-card-wrap {
   width: 100%; max-width: 350px; padding: 0 1.5rem; z-index: 10;
