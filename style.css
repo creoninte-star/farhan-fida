@@ -238,7 +238,7 @@ body {
 .arch-intro { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--clr-text-secondary); margin-bottom: 2rem; padding: 0 1rem; }
 
 .arch-names-premium { display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 1.5rem 0 2.5rem; }
-.arch-name-line { font-family: var(--font-heading); font-size: 3.2rem; font-weight: 900; font-style: italic; background: linear-gradient(to bottom, #E6C259 0%, #D4AF37 35%, #997321 50%, #D4AF37 65%, #C09C30 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(2px 3px 4px rgba(0,0,0,0.6)); line-height: 1.1; letter-spacing: 1px; }
+.arch-name-line { font-family: var(--font-heading); font-size: 3.2rem; font-weight: 900; font-style: italic; background: linear-gradient(to bottom, #d4af37 0%, #aa771c 40%, #f3e5ab 50%, #8a5a19 55%, #d4af37 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(2px 3px 3px rgba(0,0,0,0.7)); line-height: 1.1; letter-spacing: 1px; }
 .arch-divider { display: flex; align-items: center; justify-content: center; width: 100%; margin: 1rem 0; gap: 15px; }
 .arch-divider-line { flex: 1; max-width: 60px; height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent); }
 .arch-amp { font-family: var(--font-heading); font-size: 1.8rem; color: var(--clr-gold); font-style: italic; opacity: 0.8; }
