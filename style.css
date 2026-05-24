@@ -529,41 +529,29 @@ body {
     color: var(--clr-text-secondary);
     margin-bottom: 1rem;
 }
-.dress-code-colors {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
-  flex-wrap: wrap;
+.dress-code-pills {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
-.color-swatch-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.4rem;
+.dress-pill {
+    padding: 0.4rem 1.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
-.color-circle {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
+.dress-pill.red {
+    background: #A82020;
+    color: #ffffff;
+    border: 1px solid #7D1212;
 }
-.color-circle:hover {
-  transform: scale(1.15);
-}
-.color-circle.terracotta { background: #e39252; }
-.color-circle.cream { background: #fbf6ec; border-color: rgba(92, 58, 33, 0.15); }
-.color-circle.sand { background: #f5edd1; }
-.color-circle.warm-brown { background: #7e5f3c; }
-.color-circle.dark-brown { background: #5c3a21; }
-
-.color-label {
-  font-size: 0.6rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--clr-text-secondary);
+.dress-pill.black {
+    background: #1A1A1A;
+    color: #ffffff;
+    border: 1px solid #000000;
 }
 
 /* Closing Phone Queries */
