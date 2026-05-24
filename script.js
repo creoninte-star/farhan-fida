@@ -92,11 +92,13 @@ const pContainer = document.getElementById('particles');
 for (let i = 0; i < 20; i++) {
     const p = document.createElement('div');
     p.classList.add('particle');
-    p.style.width = Math.random() * 6 + 2 + 'px';
-    p.style.height = p.style.width;
+    const size = Math.random() * 10 + 8; // 8px to 18px for visible heart shapes
+    p.style.width = size + 'px';
+    p.style.height = size + 'px';
     p.style.left = Math.random() * 100 + 'vw';
     p.style.animationDuration = Math.random() * 10 + 10 + 's';
     p.style.animationDelay = Math.random() * 5 + 's';
+    p.innerHTML = `<svg viewBox="0 0 24 24" fill="currentColor" style="width: 100%; height: 100%; display: block;"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.77-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`;
     pContainer.appendChild(p);
 }
 
