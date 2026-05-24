@@ -321,32 +321,3 @@ if (slides.length > 0) {
         slides[currentSlide].classList.add('slide-active');
     }, 4000); // Change image every 4 seconds
 }
-
-// Scroll Lock and Shake Effect
-let shakeTimeout;
-let lastScrollY = window.scrollY;
-
-window.addEventListener('scroll', function() {
-    if (typeof scratched !== 'undefined' && scratched) return;
-    
-    const wrap = document.getElementById('scratch-wrap');
-    if (!wrap) return;
-    
-    // Calculate the point where the scratch card is fully in view
-    const maxScroll = Math.max(0, wrap.offsetTop + wrap.offsetHeight - window.innerHeight / 1.5);
-    
-    if (window.scrollY > maxScroll && window.scrollY > lastScrollY) {
-        // Prevent scrolling down further
-        window.scrollTo(0, maxScroll);
-        
-        // Add shake animation
-        if (!wrap.classList.contains('shake-alert')) {
-            wrap.classList.add('shake-alert');
-            clearTimeout(shakeTimeout);
-            shakeTimeout = setTimeout(() => {
-                wrap.classList.remove('shake-alert');
-            }, 500);
-        }
-    }
-    lastScrollY = window.scrollY;
-});
