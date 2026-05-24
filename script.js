@@ -268,7 +268,7 @@ function initScratchCard() {
 
 // Countdown Timer
 // Use ISO 8601 format for Safari cross-browser compatibility
-const targetDate = new Date('2026-08-05T11:00:00').getTime();
+const targetDate = new Date('2026-08-05T12:30:00').getTime();
 const daysEl = document.getElementById('cd-days');
 const hoursEl = document.getElementById('cd-hours');
 const minsEl = document.getElementById('cd-mins');
