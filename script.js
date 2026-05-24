@@ -323,3 +323,12 @@ if (slides.length > 0) {
         slides[currentSlide].classList.add('slide-active');
     }, 4000); // Change image every 4 seconds
 }
+
+// Map redirection for iOS users (Apple Maps)
+const directionsBtn = document.getElementById('directions-btn');
+if (directionsBtn) {
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (isIOS) {
+        directionsBtn.href = 'https://maps.apple.com/?q=Rhythm+Event+Galleria+Pantheeramkavu+Kozhikode';
+    }
+}
