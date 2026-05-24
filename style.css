@@ -368,7 +368,7 @@ body {
 
 .rsvp-input, .rsvp-select {
   width: 100%; padding: 0.8rem 0; margin-bottom: 1rem; background: transparent;
-  border: none; border-bottom: 1px solid rgba(201,168,76,0.4); color: var(--clr-text);
+  border: none; border-bottom: 1px solid rgba(224,146,82,0.4); color: var(--clr-text);
   font-family: var(--font-body); text-align: center; outline: none;
 }
 .rsvp-input::placeholder { color: rgba(255,255,255,0.4); }
@@ -386,21 +386,21 @@ body {
 @keyframes stroke { 100% { stroke-dashoffset: 0; } }
 
 .success-title { font-family: var(--font-heading); font-size: 1.8rem; color: #34d399; margin-bottom: 0.5rem; }
-.lucky-prizes { background: rgba(201,168,76,0.1); border-radius: 8px; padding: 1rem; margin: 1rem 0; font-size: 0.8rem; text-align: left; }
+.lucky-prizes { background: rgba(224,146,82,0.1); border-radius: 8px; padding: 1rem; margin: 1rem 0; font-size: 0.8rem; text-align: left; }
 .decline-title { font-family: var(--font-heading); font-size: 1.8rem; color: #fb7185; }
 
 /* Closing */
 .closing-section { padding: 4rem 2rem 6rem; text-align: center; }
 .closing-ornament { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 2rem; }
-.clo-line { width: 40px; height: 1px; background: rgba(201,168,76,0.4); }
+.clo-line { width: 40px; height: 1px; background: rgba(224,146,82,0.4); }
 .clo-diamond { width: 8px; height: 8px; border: 1px solid var(--clr-gold); transform: rotate(45deg); }
 .closing-quote { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 500; font-style: italic; color: var(--clr-text); margin-bottom: 0.5rem; max-width: 800px; margin-inline: auto; line-height: 1.4; }
 .closing-ref { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 3px; color: var(--clr-gold); }
-.closing-mid-line { width: 40px; height: 1px; background: rgba(201,168,76,0.4); margin: 2rem auto; }
+.closing-mid-line { width: 40px; height: 1px; background: rgba(224,146,82,0.4); margin: 2rem auto; }
 .closing-signoff { font-family: var(--font-heading); font-size: 2rem; color: var(--clr-gold); font-style: italic; margin-bottom: 0.5rem; }
 .closing-contact-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--clr-text-secondary); margin-bottom: 1rem; }
 .contact-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 3rem; }
-.contact-pill { padding: 0.5rem 1rem; border: 1px solid rgba(201,168,76,0.3); border-radius: 20px; color: var(--clr-gold); text-decoration: none; font-size: 0.8rem; }
+.contact-pill { padding: 0.5rem 1rem; border: 1px solid rgba(224,146,82,0.3); border-radius: 20px; color: var(--clr-gold); text-decoration: none; font-size: 0.8rem; }
 .closing-footer { margin-top: 3rem; padding-bottom: 2rem; text-align: center; font-size: 0.65rem; letter-spacing: 2px; color: var(--clr-text-secondary); text-transform: uppercase; }
 
 /* Premium Staggered Animations */
@@ -529,29 +529,41 @@ body {
     color: var(--clr-text-secondary);
     margin-bottom: 1rem;
 }
-.dress-code-pills {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+.dress-code-colors {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
 }
-.dress-pill {
-    padding: 0.4rem 1.8rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    border-radius: 20px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+.color-swatch-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
 }
-.dress-pill.red {
-    background: #A82020;
-    color: #ffffff;
-    border: 1px solid #7D1212;
+.color-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
 }
-.dress-pill.black {
-    background: #1A1A1A;
-    color: #ffffff;
-    border: 1px solid #000000;
+.color-circle:hover {
+  transform: scale(1.15);
+}
+.color-circle.terracotta { background: #e39252; }
+.color-circle.cream { background: #fbf6ec; border-color: rgba(92, 58, 33, 0.15); }
+.color-circle.sand { background: #f5edd1; }
+.color-circle.warm-brown { background: #7e5f3c; }
+.color-circle.dark-brown { background: #5c3a21; }
+
+.color-label {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--clr-text-secondary);
 }
 
 /* Closing Phone Queries */

@@ -120,11 +120,11 @@ function initScratchCard() {
     canvas.style.height = cssHeight + 'px';
     ctx.scale(dpr, dpr);
 
-    // Draw gold foil base
+    // Draw terracotta foil base
     const gradient = ctx.createLinearGradient(0, 0, cssWidth, cssHeight);
-    gradient.addColorStop(0, '#D8C2A0');
-    gradient.addColorStop(0.5, '#F5E4C3');
-    gradient.addColorStop(1, '#B6A084');
+    gradient.addColorStop(0, '#E09252');
+    gradient.addColorStop(0.5, '#F2B98A');
+    gradient.addColorStop(1, '#BD7031');
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, cssWidth, cssHeight);
 
@@ -148,7 +148,7 @@ function initScratchCard() {
     ctx.shadowBlur = 2;
     ctx.shadowOffsetX = 1;
     ctx.shadowOffsetY = 1;
-    ctx.fillStyle = '#4A3728';
+    ctx.fillStyle = '#4C2D13';
     ctx.font = 'bold 13px "Cinzel", Arial, sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
